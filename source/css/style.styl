@@ -1,0 +1,71 @@
+@import "_variables"
+
+@font-face {
+    font-family: "Allura";
+    src: local("Allura"),
+         url("/fonts/Allura-Regular.woff") format("woff"),
+         url("/fonts/Allura-Regular.ttf") format("truetype");
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Tahoma, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    color: $font-color--article;
+    background: $back-color--body;
+    cursor: url($cursor--normal), auto;
+}
+
+header, section, footer, aside, nav, article, figure {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    cursor: url($cursor--link), auto;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+#header {
+    height: $header-height;
+    line-height: $header-height;
+}
+
+#avatar {
+    color: $font-color--head;
+    line-height: $header-height;
+    height: $header-height;
+
+    img {
+        width: $header-height;
+        height: $header-height;
+        margin-right: 6px;
+        vertical-align: middle;
+        border-radius: $header-height;
+    }
+
+    span {
+        font-family: Allura, Tahoma, Arial, "Microsoft YaHei", sans-serif;
+        font-size: $header-height - 20px;
+        font-weight: 700;
+        line-height: $header-height - 10px;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+}

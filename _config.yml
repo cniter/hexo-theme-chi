@@ -1,0 +1,15 @@
+# Header | 主菜单
+menu:
+  所有文章: /archives
+  关于本站: /about
+
+# Small icon of Your site | 站点小图标地址
+favicon: img/favicon.png
+
+# Link to your avatar | 填写头像地址
+avatar: img/head.jpg
+
+# set cursor | 设置鼠标指针图标
+cursor:
+  normal: img/cursor/normal.cur # 初始指针
+  link: img/cursor/link.cur # 链接指针
