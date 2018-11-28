@@ -1,7 +1,17 @@
 # Header | 主菜单
 menu:
-  所有文章: /archives
-  关于本站: /about
+  - title: 首页
+    url: /
+    intro: "首页"
+    icon: "fa fa-home"
+  - title: 归档
+    url: /archives
+    intro: "所有文章"
+    icon: "fa fa-archive"
+  - title: 关于
+    url: /about
+    intro: "关于本站"
+    icon: "fa fa-user"
 
 # Small icon of Your site | 站点小图标地址
 favicon: img/favicon.png

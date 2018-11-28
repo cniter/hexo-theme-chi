@@ -10,10 +10,13 @@
         <link rel="shortcut icon" href="<%- url_for(theme.favicon) %>">    <!-- 收藏夹图标 -->
     <% } %>
 
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fork-awesome/1.1.5/css/fork-awesome.min.css" integrity="sha256-P64qV9gULPHiZTdrS1nM59toStkgjM0dsf5mK/UwBV4=" crossorigin="anonymous" />
 
     <%- css("css/style") %>   
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
 </head>
 <body>
     <!--[if lt IE 9]>
@@ -24,13 +27,28 @@
         </div>
     <![endif]-->
     <header id="header">
-        <a id="avatar" href="<%- config.root %>" title="Hi Mate">
-            <img src="<%- url_for(theme.avatar) %>">
-            <span class="author"><%= config.author %></span>
-        </a>
+        <nav id="main-nav" class="navbar navbar-defaut" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a id="avatar" class="navbar-brand" href="<%- config.root %>" title="Hi Mate">
+                        <img src="<%- url_for(theme.avatar) %>">
+                        <span class="author"><%= config.author %></span>
+                    </a>
+                </div>
 
-        <nav id="menu">
-            
+                <div class="navbar-collapse nav-menu">
+                    <ul class="nav navbar-nav">
+                        <% theme.menu.forEach(function(m) { %>
+                        <li>
+                            <a href="<%- url_for(m.url) %>" title="<%- m.intro %>">
+                                <i class="<%- m.icon %>"></i>
+                                <%- m.title %>
+                            </a>
+                        </li>
+                        <% }) %>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 </body>

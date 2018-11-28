@@ -41,14 +41,14 @@ a {
 }
 
 #header {
-    height: $header-height;
+    min-height: $header-height;
     line-height: $header-height;
 }
 
-#avatar {
+a#avatar {
     color: $font-color--head;
     line-height: $header-height;
-    height: $header-height;
+    min-height: $header-height;
 
     img {
         width: $header-height;
@@ -63,6 +63,7 @@ a {
         font-size: $header-height - 20px;
         font-weight: 700;
         line-height: $header-height - 10px;
+        vertical-align: middle;
 
         &:hover {
             color: #fff;
