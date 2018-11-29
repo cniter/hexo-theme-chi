@@ -13,6 +13,9 @@ menu:
     intro: "关于本站"
     icon: "fa fa-user"
 
+# set header height | 设置导航栏高度
+header_height: 60
+
 # Small icon of Your site | 站点小图标地址
 favicon: img/favicon.png
 
@@ -21,5 +24,6 @@ avatar: img/head.jpg
 
 # set cursor | 设置鼠标指针图标
 cursor:
-  normal: img/cursor/normal.cur # 初始指针
+  on: true
+  normal: img/cursor/normal.cur # 默认指针
   link: img/cursor/link.cur # 链接指针

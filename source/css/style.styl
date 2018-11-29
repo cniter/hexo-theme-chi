@@ -24,7 +24,6 @@ body {
     font-size: 16px;
     color: $font-color--article;
     background: $back-color--body;
-    cursor: url($cursor--normal), auto;
 }
 
 header, section, footer, aside, nav, article, figure {
@@ -33,7 +32,6 @@ header, section, footer, aside, nav, article, figure {
 
 a {
     text-decoration: none;
-    cursor: url($cursor--link), auto;
 
     &:hover {
         text-decoration: none;
@@ -68,5 +66,17 @@ a#avatar {
         &:hover {
             color: #fff;
         }
+    }
+}
+
+#navbar-toggler--btn {
+    color: $font-color--head;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        border-color: #fff;
     }
 }
