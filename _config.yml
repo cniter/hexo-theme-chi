@@ -13,14 +13,14 @@ menu:
     intro: "关于本站"
     icon: "fa fa-user"
 
-# set header height | 设置导航栏高度
+# set header height | 设置导航栏高度 px
 header_height: 60
 
 # Small icon of Your site | 站点小图标地址
 favicon: img/favicon.png
 
 # Link to your avatar | 填写头像地址
-avatar: img/head.jpg
+avatar: img/avatar.jpg
 
 # set cursor | 设置鼠标指针图标
 cursor:
