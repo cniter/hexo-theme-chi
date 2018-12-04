@@ -1,1 +1,16 @@
-<div><%- item.content %></div>
+<% if (item.link || item.title){ %>
+    <%- include('post/title', {class_name: 'article-title'}) %>
+<% } %>
+
+<% if (!is_post && (item.description || item.excerpt)){ %>
+    <% if (item.description) { %>
+        <!-- 显示文章描述，及文章开头的配置 -->
+        <%- item.description %>
+    <% } else { %>
+        <!-- 显示文章摘要，即more标签之前的内容 -->
+        <%- item.excerpt %>
+    <% } %>
+<% } else { %>
+    <!-- 显示文章内容 -->
+    <%- item.content %>
+<% } %>
