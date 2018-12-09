@@ -1,5 +1,5 @@
 <% page.posts.each(function(item) { %>
-    <%- include('post/title', {item: item, class_name: 'article-title'}) %>
+    <%- include('article', {item: item, is_post: false}) %>
 <% }) %>
 
 <% if (page.total > 1) { %>

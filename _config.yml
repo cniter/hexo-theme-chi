@@ -8,6 +8,14 @@ menu:
     url: /archives
     intro: "所有文章"
     icon: "fa fa-archive"
+  - title: 分类
+    url: /categories
+    intro: "全部分类"
+    icon: "fa fa-folder"
+  - title: 标签
+    url: tags
+    intro: "全部标签"
+    icon: "fa fa-tags"
   - title: 关于
     url: /about
     intro: "关于本站"

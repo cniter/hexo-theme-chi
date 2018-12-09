@@ -1,0 +1,47 @@
+<div>
+    <h1>
+        <i class="fa fa-folder"></i>
+        <%= page.title %>
+    </h1>
+</div>
+
+<div> 
+   <% if (site.categories.length) { %>
+       <div>
+           <ul>
+           <% site.categories.sort('name').each(function(item) { %>
+               <li>
+                   <a href="#<%= item.name %>">
+                       <%= item.name %>
+                       <span>
+                           <%= item.posts.length %>
+                        </span>
+                    </a>
+                </li>
+           <% }); %>
+           </ul>
+       </div>
+       
+       <div>
+           <% site.categories.sort('name').each(function(item) { %>
+           <h4> <%= item.name %> </h4>
+           <ul>
+               <% site.posts.sort('date', -1).forEach(function(it) { %>
+                    <% if (it.categories.length >= 1) { %>
+                        <% it.categories.data.forEach(function(data) { %>
+                            <% if (data._id == item._id) { %>
+                        <li>
+                            <a href="<%= url_for(it.path) %>" 
+                                <% if (it.description) { %> 
+                                    title="<%= it.description %>" 
+                                <% } %> >
+                                <%= it.title %>
+                            </a>
+                        </li>
+                   <% } }); } %>
+               <% }); %>
+            </ul>
+            <% }); %>
+       </div>
+   <% } %>
+</div>
