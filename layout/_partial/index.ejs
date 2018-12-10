@@ -3,10 +3,10 @@
 <% }) %>
 
 <% if (page.total > 1) { %>
-<div class="text-center">
+<nav id="pagination--nav" class="text-center">
     <%- paginator({
         prev_text: '&laquo; Prev',
         next_text: 'Next &raquo;'
     }) %>
-</div>
+</nav>
 <% } %>

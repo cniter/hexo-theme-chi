@@ -31,16 +31,27 @@ header, section, footer, aside, nav, article, figure {
 }
 
 a {
+    color: inherit;
     text-decoration: none;
 
     &:hover {
+        color: $font-color--hover;
         text-decoration: none;
     }
+}
+
+.div-border {
+    border: 1px solid $back-color--border;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-radius: 6px;
+    box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.46);
 }
 
 #header {
     min-height: $header-height;
     line-height: $header-height;
+    color: $font-color--head;
 }
 
 a#avatar {
@@ -64,7 +75,7 @@ a#avatar {
         vertical-align: middle;
 
         &:hover {
-            color: #fff;
+            color: $font-color--hover;
         }
     }
 }
@@ -77,6 +88,57 @@ a#avatar {
     }
 
     &:hover {
-        border-color: #fff;
+        border-color: $font-color--hover;
+    }
+}
+
+#pagination--nav {
+	text-align: center;
+	margin-top: 30px;
+	.page-number{
+		width: 20px;
+		height: 20px;
+		background: $back-color--border;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		border-radius: 50%;
+		display: inline-block;
+		color: $font-color--hover;
+		line-height: 20px;
+		font-size: 12px;
+		margin: 0 3px 30px;
+		&:hover{
+			background: $back-color--hover;
+		}
+	}
+	.current{
+		background: $font-color--head;
+		cursor: default;
+		&:hover{
+			background: $font-color--head;
+		}
+	}
+	.extend{
+		color: $font-color--article;
+		margin: 0 27px;
+		opacity: 0;
+		&:hover{
+			color: $font-color--hover;
+		}
+	}
+	&:hover{
+		.extend{
+			opacity: 1;
+		}
+	}
+}
+
+.article-header {
+    padding: 15px 0px 15px 25px;
+    font-size: 26px;
+    color: $font-color--head;
+
+    .article-title--post {
+        text-align: center;
     }
 }

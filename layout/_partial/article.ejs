@@ -1,5 +1,11 @@
-<% if (item.link || item.title){ %>
-    <%- include('post/title', {class_name: 'article-title'}) %>
+<article class="article article-type-<%= item.layout %> div-border">
+
+<% if (item.link || item.title) { %>
+    <% if (is_post) { %>    <!-- 如果是发表的文章 -->
+        <%- include('post/title', {class_name: 'article-title--post'}) %>
+    <% } else { %>
+        <%- include('post/title', {class_name: 'article-title--index'}) %>
+    <% } %>
 <% } %>
 
 <% if (!is_post && (item.description || item.excerpt)){ %>
@@ -14,3 +20,4 @@
     <!-- 显示文章内容 -->
     <%- item.content %>
 <% } %>
+</article>

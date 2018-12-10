@@ -1,12 +1,12 @@
 <% page.posts.each(function(item) { %>
-    <%- include('post/title', {item: item, class_name: 'article-title'}) %>
+    <%- include('post/title', {item: item, class_name: 'article-title--index'}) %>
 <% }) %>
 
 <% if (page.total > 1) { %>
-<div class="text-center">
+<nav id="pagination--nav" class="text-center">
     <%- paginator({
         prev_text: '&laquo; Prev',
         next_text: 'Next &raquo;'
     }) %>
-</div>
+</nav>
 <% } %>
