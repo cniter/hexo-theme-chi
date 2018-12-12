@@ -26,7 +26,7 @@ body {
     background: $back-color--body;
 }
 
-header, section, footer, aside, nav, article, figure {
+header, main, section, footer, aside, nav, article, figure {
     display: block;
 }
 
@@ -133,12 +133,6 @@ a#avatar {
 	}
 }
 
-.article-header {
-    padding: 15px 0px 15px 25px;
-    font-size: 26px;
-    color: $font-color--head;
 
-    .article-title--post {
-        text-align: center;
-    }
-}
+
+@import "_partial/article"

@@ -1,4 +1,4 @@
-<article class="article article-type-<%= item.layout %> div-border">
+<article class="article div-border">
 
 <% if (item.link || item.title) { %>
     <% if (is_post) { %>    <!-- 如果是发表的文章 -->
@@ -8,16 +8,22 @@
     <% } %>
 <% } %>
 
-<% if (!is_post && (item.description || item.excerpt)){ %>
+<section class="article-content">
+<% if (is_post) { %>
+    <!-- 显示文章内容 -->
+    <%- item.content %>
+<% } else { %>
     <% if (item.description) { %>
         <!-- 显示文章描述，及文章开头的配置 -->
         <%- item.description %>
-    <% } else { %>
+    <% } else if (item.excerpt) { %>
         <!-- 显示文章摘要，即more标签之前的内容 -->
         <%- item.excerpt %>
+    <% } else {%>
+        <!-- 显示文章内容 -->
+        <%- item.content %>
     <% } %>
-<% } else { %>
-    <!-- 显示文章内容 -->
-    <%- item.content %>
 <% } %>
+</section>
+
 </article>

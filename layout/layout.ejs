@@ -64,6 +64,16 @@
         </nav>
     </header>
 
-    <div><%- body %></div>
+    <div id="container" class="container">
+        <div class="row">
+            <aside id="left-col" class="col-md-1"></aside>
+            <main class="col-md-8 main-content">
+                <%- body %>
+            </main>
+            <aside id="right-col" class="col"></aside>
+        </div>
+    </div>
+
+    <footer></footer>
 </body>
 </html>
