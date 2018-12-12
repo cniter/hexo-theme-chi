@@ -35,3 +35,7 @@ cursor:
   on: true
   normal: img/cursor/normal.cur # 默认指针
   link: img/cursor/link.cur # 链接指针
+
+# Display Math(LaTeX, MathML...) | 数学公式支持
+## https://www.mathjax.org/
+mathjax: true
