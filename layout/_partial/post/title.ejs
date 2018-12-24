@@ -1,5 +1,17 @@
 <header class="article-header">
-    <section class="<%= class_name %>">
+    <span class="article-date <%= class_name %>">
+        <i class="fa fa-calendar" aria-hidden="true"></i>
+        <% if (item.link) { %>
+        <a href="<%- url_for(item.link) %>">
+            <time datetime="<%= date_xml(item.date) %>"><%= date(item.date) %></time>
+        </a>
+        <% } else if (item.title) { %>
+        <a href="<%- url_for(item.path) %>">
+            <time datetime="<%= date_xml(item.date) %>"><%= date(item.date) %></time>
+        </a>
+        <% } %>
+    </span>
+    <section class="article-title <%= class_name %>">
         <% if (item.link) { %>
         <a href="<%- url_for(item.link) %>" target="_blank">
             <%= item.title %>
@@ -10,4 +22,28 @@
         </a>
         <% } %>
     </section>
+    <div class="article-label">
+        <% if (item.categories && item.categories.length){ %>
+        <div class="article-category tagcloud">
+            <i class="fa fa-book" aria-hidden="true"></i>
+            <%- list_categories(item.categories, {
+                    show_count: false
+                    , class: 'article-category'
+                    , style: 'none'
+                    , separator: ''
+            }) %>
+        </div>
+        <% } %>
+        <% if (item.tags && item.tags.length){ %>
+        <div class="article-tag tagcloud">
+            <i class="fa fa-bookmark" aria-hidden="true"></i>
+            <%- list_tags(item.tags, {
+                    show_count: false
+                    , class: 'article-tag'
+                    , style: 'none'
+                    , separator: ''
+            }) %>
+        </div>
+        <% } %>
+    </div>
 </header>
