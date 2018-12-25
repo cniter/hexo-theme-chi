@@ -22,28 +22,5 @@
         </a>
         <% } %>
     </section>
-    <div class="article-label">
-        <% if (item.categories && item.categories.length){ %>
-        <div class="article-category tagcloud">
-            <i class="fa fa-book" aria-hidden="true"></i>
-            <%- list_categories(item.categories, {
-                    show_count: false
-                    , class: 'article-category'
-                    , style: 'none'
-                    , separator: ''
-            }) %>
-        </div>
-        <% } %>
-        <% if (item.tags && item.tags.length){ %>
-        <div class="article-tag tagcloud">
-            <i class="fa fa-bookmark" aria-hidden="true"></i>
-            <%- list_tags(item.tags, {
-                    show_count: false
-                    , class: 'article-tag'
-                    , style: 'none'
-                    , separator: ''
-            }) %>
-        </div>
-        <% } %>
-    </div>
+    <%- include('tag') %>
 </header>
