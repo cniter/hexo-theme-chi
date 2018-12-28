@@ -20,7 +20,7 @@ html {
 
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Tahoma, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: $font-family--body;
     font-size: 16px;
     color: $font-color--article;
     background: $back-color--body;
@@ -54,21 +54,21 @@ a {
     color: $font-color--head;
 }
 
-a#avatar {
+a#title {
     color: $font-color--head;
     line-height: $header-height;
     min-height: $header-height;
 
     img {
-        width: $header-height;
-        height: $header-height;
+        width: $header-height - 20px;
+        height: $header-height - 20px;
         margin-right: 6px;
         vertical-align: middle;
         border-radius: $header-height;
     }
 
     span {
-        font-family: Allura, Tahoma, Arial, "Microsoft YaHei", sans-serif;
+        font-family: $font-family--head;
         font-size: $header-height - 20px;
         font-weight: 700;
         line-height: $header-height - 10px;

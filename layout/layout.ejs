@@ -41,10 +41,16 @@
     <![endif]-->
     <header id="header">
         <nav class="navbar navbar-expand-md">
-            <a id="avatar" class="navbar-brand" href="<%- config.root %>" title="Hi Mate">
+            <h1 id="site-title">
+                <a href="<%- url_for() %>" id="title" class="navbar-brand">
+                    <img src="<%- url_for(theme.favicon) %>">
+                    <span><%= config.title %></span>
+                </a>
+            </h1>
+            <!-- <a id="avatar" class="navbar-brand" href="<%- config.root %>" title="Hi Mate">
                 <img src="<%- url_for(theme.avatar) %>">
                 <span class="author"><%= config.author %></span>
-            </a>
+            </a> -->
         
             <button id="navbar-toggler--btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <span><i class="fa fa-bars"></i></span>
