@@ -1,6 +1,6 @@
 <div class="article-label">
     <% if (item.categories && item.categories.length){ %>
-    <div class="article-category tagcloud">
+    <div class="article-category label">
         <i class="fa fa-book" aria-hidden="true"></i>
         <%- list_categories(item.categories, {
                 show_count: false
@@ -11,7 +11,7 @@
     </div>
     <% } %>
     <% if (item.tags && item.tags.length){ %>
-    <div class="article-tag tagcloud">
+    <div class="article-tag label">
         <i class="fa fa-bookmark" aria-hidden="true"></i>
         <%- list_tags(item.tags, {
                 show_count: false

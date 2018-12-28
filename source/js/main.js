@@ -1,5 +1,5 @@
-import resetTags from './partial/tag.js';
+import resetLabelStyle from './partial/label.js';
 
 $(document).ready(function () {
-    resetTags();
+    resetLabelStyle();
 });

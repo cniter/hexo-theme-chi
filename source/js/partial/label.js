@@ -1,5 +1,5 @@
-let resetTags = function() {
-    var tags = $(".tagcloud a");
+let resetLabelStyle = function() {
+    var tags = $(".label a");
     tags.css({ "font-size": "12px" });
     for (var i = 0, len = tags.length; i < len; i++) {
         var num = tags.eq(i).html().length % 5 + 1;
@@ -8,4 +8,4 @@ let resetTags = function() {
     }
 }
 
-export default resetTags;
+export default resetLabelStyle;
