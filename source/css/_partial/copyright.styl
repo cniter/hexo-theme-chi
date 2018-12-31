@@ -1,0 +1,38 @@
+.copyright {
+    width: 90%;
+    max-width: 45em;
+    margin: 20px auto;
+    padding: 0.5em 1.8em;
+    border: 1px solid #2F2F2F;
+    font-size: 0.93em;
+    line-height: 1.6em;
+    word-break: break-word;
+    background: rgb(65, 65, 65);
+    box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.46);
+    border-radius: 6px;
+    span {
+        margin-right: 1em;
+        color: #D5D5D5;
+        font-weight: bold;
+    }
+    a {
+        color: $font-color--head;
+        &:hover {
+            font-weight: bold;
+            color: #FFF;
+        }
+    }
+    &:hover p .copy-path::after {
+        content: "复制";
+    }
+    .post-url:hover {
+        font-weight: normal;
+    }
+    .copy-path {
+        margin-left: 1em;
+        &:hover {
+            color: gray;
+            cursor: pointer;
+        }
+    }
+}
