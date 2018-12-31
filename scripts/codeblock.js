@@ -11,8 +11,8 @@ const attributes = [
 let attributesStr = attributes.join(' ')
 
 hexo.extend.filter.register('after_post_render', function (data) {
-    while (/<figure class="highlight ([a-zA-Z]+)">.*?<\/figure>/.test(data.content)) {
-        data.content = data.content.replace(/<figure class="highlight ([a-zA-Z]+)">.*?<\/figure>/, function () {
+    while (/<figure class="highlight ([a-zA-Z\+]+)">.*?<\/figure>/.test(data.content)) {
+        data.content = data.content.replace(/<figure class="highlight ([a-zA-Z\+]+)">.*?<\/figure>/, function () {
             let language = RegExp.$1 || 'CODE'
             let lastMatch = RegExp.lastMatch
             lastMatch = lastMatch.replace(/<figure class="highlight/, '<figure class="highlight hljs')

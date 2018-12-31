@@ -1,5 +1,17 @@
+<!-- 首先渲染置顶文章 -->
+<% if (page.current == 1) { %>
+    <% site.posts.each(function(item) { %>
+        <% if (item.top) { %>
+            <%- include('article', {item: item, is_post: false}) %>
+        <% } %>
+    <% }); %>
+<% } %>
+
+<!-- 然后渲染其它文章 -->
 <% page.posts.each(function(item) { %>
-    <%- include('article', {item: item, is_post: false}) %>
+    <% if (!item.top) { %>
+        <%- include('article', {item: item, is_post: false}) %>
+    <% } %>
 <% }) %>
 
 <% if (page.total > 1) { %>

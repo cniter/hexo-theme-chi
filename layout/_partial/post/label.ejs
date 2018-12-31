@@ -1,4 +1,10 @@
 <div class="article-label">
+    <% if (item.top) { %>
+        <span class="article--top label">
+            <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+            <a href="javascript:void(0)">置顶</a>
+        </span>
+    <% } %>
     <% if (item.categories && item.categories.length){ %>
     <div class="article-category label">
         <i class="fa fa-book" aria-hidden="true"></i>
