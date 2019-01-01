@@ -48,5 +48,32 @@
     }
 }
 
+.article-content--excerpt {
+    display: block;
+}
+
+.article-content--all {
+    display: none;
+}
+
+
+.article-content-more {
+    text-align: center;
+
+    .article-more--link {
+        width: 100%;
+        color: #4298cc;
+        font-size: 1.25rem;
+        line-height: 1;
+        background-color: rgba(153, 153, 153, 0.2);
+        border: 1px solid transparent;
+        border-radius: .25rem;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
 @import "label"
 @import "copyright"

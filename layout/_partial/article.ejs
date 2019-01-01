@@ -1,4 +1,4 @@
-<article class="article div-border">
+<article id="<%= item.layout %>-<%= item.slug.replace(/\.|#|\s/g, '-') %>" class="article div-border">
 
 <% if (item.link || item.title) { %>
     <% if (is_post) { %>    <!-- 如果是发表的文章 -->
@@ -13,6 +13,7 @@
     <!-- 显示文章内容 -->
     <%- item.content %>
 <% } else { %>
+    <div class="article-content--excerpt">
     <% if (item.description) { %>
         <!-- 显示文章描述，及文章开头的配置 -->
         <%- item.description %>
@@ -23,6 +24,15 @@
         <!-- 显示文章内容 -->
         <%- item.content %>
     <% } %>
+    </div>
+    <div class="article-content--all">
+        <%- item.content %>
+    </div>
+    <div class="article-content-more">
+        <button type="button" class="article-more--link">
+            <i class="fa fa-angle-double-down fa-3x" aria-hidden="true"></i>
+        </button>
+    </div>
 <% } %>
 </section>
 
@@ -31,3 +41,15 @@
 <% if (is_post) { %>
     <%- include('post/copyright') %>
 <% } %>
+
+<!-- <script>
+    $("#<%= item.layout %>-<%= item.slug %> .article-more--link").click(function() {
+        $('#<%= item.layout %>-<%= item.slug %> .article-content--all').toggle(500);
+        $('#<%= item.layout %>-<%= item.slug %> .article-content--excerpt').toggle(500);
+        $(this).find(".fa").toggleClass('fa-angle-double-down');
+        $(this).find(".fa").toggleClass('fa-angle-double-up');
+        $('html, body').animate({
+            scrollTop: $("#<%= item.layout %>-<%= item.slug %>").offset().top
+        }, 500);
+    });
+</script> -->
