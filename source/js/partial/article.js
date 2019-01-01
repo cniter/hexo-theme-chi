@@ -1,6 +1,6 @@
 let $root = $('html, body');
 
-let articleMore = function() {
+let articleShowMore = function() {
     $("article").each( function() {
         let articleID = $(this).attr("id");
         $("#" + articleID + " .article-more--link").click(function() {
@@ -10,9 +10,11 @@ let articleMore = function() {
             $(this).find(".fa").toggleClass('fa-angle-double-up');
             $root.animate({
                 scrollTop: $("#" + articleID).offset().top
-            }, 500);
+            }, 500, function() {
+                window.location.hash = articleID;
+            });
         });
     } );
 }
 
-export default articleMore;
+export default articleShowMore;

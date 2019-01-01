@@ -41,15 +41,3 @@
 <% if (is_post) { %>
     <%- include('post/copyright') %>
 <% } %>
-
-<!-- <script>
-    $("#<%= item.layout %>-<%= item.slug %> .article-more--link").click(function() {
-        $('#<%= item.layout %>-<%= item.slug %> .article-content--all').toggle(500);
-        $('#<%= item.layout %>-<%= item.slug %> .article-content--excerpt').toggle(500);
-        $(this).find(".fa").toggleClass('fa-angle-double-down');
-        $(this).find(".fa").toggleClass('fa-angle-double-up');
-        $('html, body').animate({
-            scrollTop: $("#<%= item.layout %>-<%= item.slug %>").offset().top
-        }, 500);
-    });
-</script> -->

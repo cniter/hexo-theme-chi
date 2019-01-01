@@ -1,7 +1,7 @@
 import resetLabelStyle from './partial/label.js';
-import articleMore from './partial/article.js';
+import articleShowMore from './partial/article.js';
 
 $(document).ready(function () {
     resetLabelStyle();
-    articleMore();
+    articleShowMore();
 });

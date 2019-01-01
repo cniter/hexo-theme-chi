@@ -59,18 +59,30 @@
 
 .article-content-more {
     text-align: center;
+    width: 100%;
+    
+    &:hover {
+        padding-top: 16px;
+        background-image: -webkit-radial-gradient(300px 20px ellipse at top, $font-color--head,rgba(153,153,153,0));
+        background-image: radial-gradient(300px 20px ellipse at top, $font-color--head,rgba(153,153,153,0));
+        border-radius: .25rem;
+    }
 
     .article-more--link {
         width: 100%;
-        color: #4298cc;
-        font-size: 1.25rem;
+        color: $font-color--head;
+        font-size: 1rem;
         line-height: 1;
-        background-color: rgba(153, 153, 153, 0.2);
+        background-color: rgba(153, 153, 153, 0);
         border: 1px solid transparent;
         border-radius: .25rem;
 
         &:focus {
             outline: none;
+        }
+
+        &:hover {
+            color: $font-color--hover;
         }
     }
 }
