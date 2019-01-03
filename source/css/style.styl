@@ -55,6 +55,10 @@ a {
     min-height: $header-height;
     line-height: $header-height;
     color: $font-color--head;
+
+    nav {
+        justify-content: space-between;
+    }
 }
 
 a#title {
@@ -93,6 +97,10 @@ a#title {
     &:hover {
         border-color: $font-color--hover;
     }
+}
+
+#collapsibleNavbar {
+    flex-grow: 0;
 }
 
 #pagination--nav {
