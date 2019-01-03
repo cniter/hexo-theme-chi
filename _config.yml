@@ -36,6 +36,9 @@ cursor:
   normal: img/cursor/normal.cur # 默认指针
   link: img/cursor/link.cur # 链接指针
 
+# show all article content | 展开全文
+enable_show_all: true
+
 # Display Math(LaTeX, MathML...) | 数学公式支持
 ## https://www.mathjax.org/
 mathjax: true

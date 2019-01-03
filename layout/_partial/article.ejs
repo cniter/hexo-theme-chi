@@ -25,14 +25,16 @@
         <%- item.content %>
     <% } %>
     </div>
-    <div class="article-content--all">
-        <%- item.content %>
-    </div>
-    <div class="article-content-more">
-        <button type="button" class="article-more--link">
-            <i class="fa fa-angle-double-down fa-3x" aria-hidden="true"></i>
-        </button>
-    </div>
+    <% if (theme.enable_show_all) { %>
+        <div class="article-content--all">
+            <%- item.content %>
+        </div>
+        <div class="article-content-more">
+            <button type="button" class="article-more--link">
+                <i class="fa fa-angle-double-down fa-3x" aria-hidden="true"></i>
+            </button>
+        </div>
+    <% } %>
 <% } %>
 </section>
 
