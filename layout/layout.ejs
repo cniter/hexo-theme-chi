@@ -40,33 +40,35 @@
         </div>
     <![endif]-->
     <header id="header">
-        <nav class="navbar navbar-expand-md container">
-            <h1 id="site-title">
-                <a href="<%- url_for() %>" id="title" class="navbar-brand">
-                    <img src="<%- url_for(theme.favicon) %>">
-                    <span><%= config.title %></span>
-                </a>
-            </h1>
-            <!-- <a id="avatar" class="navbar-brand" href="<%- config.root %>" title="Hi Mate">
-                <img src="<%- url_for(theme.avatar) %>">
-                <span class="author"><%= config.author %></span>
-            </a> -->
-        
-            <button id="navbar-toggler--btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                <span><i class="fa fa-bars"></i></span>
-            </button>
-        
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav">
-                    <% theme.menu.forEach(function(m) { %>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<%- url_for(m.url) %>" title="<%- m.intro %>">
-                            <i class="<%- m.icon %>"></i>
-                            <%= m.title %>
-                        </a>
-                    </li>
-                    <% }) %>
-                </ul>
+        <nav id="navbar" class="navbar navbar-expand-md">
+            <div class="container">
+                <h1 id="site-title">
+                    <a href="<%- url_for() %>" id="title" class="navbar-brand">
+                        <img src="<%- url_for(theme.favicon) %>">
+                        <span><%= config.title %></span>
+                    </a>
+                </h1>
+                <!-- <a id="avatar" class="navbar-brand" href="<%- config.root %>" title="Hi Mate">
+                    <img src="<%- url_for(theme.avatar) %>">
+                    <span class="author"><%= config.author %></span>
+                </a> -->
+    
+                <button id="navbar-toggler--btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span><i class="fa fa-bars"></i></span>
+                </button>
+    
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <% theme.menu.forEach(function(m) { %>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<%- url_for(m.url) %>" title="<%- m.intro %>">
+                                <i class="<%- m.icon %>"></i>
+                                <%= m.title %>
+                            </a>
+                        </li>
+                        <% }) %>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>

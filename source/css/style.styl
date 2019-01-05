@@ -44,64 +44,13 @@ a {
 }
 
 .div-border {
-    border: 1px solid $back-color--border;
     margin-bottom: 20px;
     padding-bottom: 20px;
-    border-radius: 6px;
+    border: 1px solid $back-color--border;
     box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.46);
+    border-radius: 6px;
 }
 
-#header {
-    min-height: $header-height;
-    line-height: $header-height;
-    color: $font-color--head;
-
-    nav {
-        justify-content: space-between;
-    }
-}
-
-a#title {
-    color: $font-color--head;
-    line-height: $header-height;
-    min-height: $header-height;
-
-    img {
-        width: $header-height - 20px;
-        height: $header-height - 20px;
-        margin-right: 6px;
-        vertical-align: middle;
-        border-radius: $header-height;
-    }
-
-    span {
-        font-family: $font-family--head;
-        font-size: $header-height - 20px;
-        font-weight: 700;
-        line-height: $header-height - 10px;
-        vertical-align: middle;
-
-        &:hover {
-            color: $font-color--hover;
-        }
-    }
-}
-
-#navbar-toggler--btn {
-    color: $font-color--head;
-
-    &:focus {
-        outline: none;
-    }
-
-    &:hover {
-        border-color: $font-color--hover;
-    }
-}
-
-#collapsibleNavbar {
-    flex-grow: 0;
-}
 
 #pagination--nav {
 	text-align: center;
@@ -145,7 +94,7 @@ a#title {
 }
 
 
-
+@import "_partial/header"
 @import "_partial/article"
 @import "_widget/highlight"
 @import "_widget/codeblock"
