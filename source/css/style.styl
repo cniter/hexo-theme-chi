@@ -27,8 +27,9 @@ body {
     font-size: 16px;
     color: $font-color--article;
     background: $back-color--body;
-    word-wrap: break-word;
-    word-break: break-all;
+    word-wrap: break-word;	// 自动换行
+    // word-break: break-all;	// 强制英文单词换行
+	// white-space: pre-wrap;	// 保留文本空白序列，并正常换行
 }
 
 header, main, section, footer, aside, nav, article, figure {
@@ -43,6 +44,10 @@ a {
         color: $font-color--hover;
         text-decoration: none;
     }
+}
+
+img, object, video { 
+	max-width: 100%;
 }
 
 .div-border {
