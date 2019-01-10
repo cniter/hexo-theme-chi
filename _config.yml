@@ -42,6 +42,9 @@ cursor:
 # show all article content | 展开全文
 enable_show_all: true
 
+# Socail Share | 是否开启分享
+baidushare: true
+
 # Display Math(LaTeX, MathML...) | 数学公式支持
 ## https://www.mathjax.org/
 mathjax: true

@@ -22,6 +22,7 @@
             border-radius: 5px;
             background-color: #2F2E2E;
             word-wrap: break-word;
+            word-break: break-all;
             white-space: pre-wrap;
             margin: 2px;
             display: inline-block;
@@ -61,21 +62,25 @@
                 }
             }
         }
+    }
 
-        code {
-            margin: 0 3px;
-            border: dashed 1px #000;
-            color: #999;
-            padding: 1px 8px;
-            font-size: 90%;
-            -webkit-border-radius: 5px;
-            border-radius: 5px;
-            font-family: Consolas, 'Courier New', Courier;
-            text-shadow: none;
-            background-color: #002b36;
-            word-wrap: break-word;
-            white-space: pre-wrap;
-        }
+    a {
+        color:#4094c7;
+    }
+
+    code {
+        margin: 0 3px;
+        border: dashed 1px #000;
+        color: #999;
+        padding: 1px 8px;
+        font-size: 90%;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        font-family: Consolas, 'Courier New', Courier;
+        text-shadow: none;
+        background-color: #002b36;
+        word-wrap: break-word;
+        white-space: pre-wrap;
     }
     
     h1 {
@@ -188,24 +193,28 @@
     }    
 
     ul {
-        li {
-            margin-left: 10px;
-        }
+        list-style: none;
+        margin-left: 10px;
 
-        li:before {
-            content: '\f05d';
-            font: normal normal normal 14px / 1 ForkAwesome;
-            display: inline-block;
-            margin: 0 10px;
-            line-height: 28px;
+        > li {
+            list-style: none;
+            margin-left: 10px;
+
+            &:before {
+                content: '\f05d';
+                font: normal normal normal 14px / 1 ForkAwesome;
+                display: inline-block;
+                margin: 0 10px;
+                line-height: 28px;
+            }
         }
     }
     
     ol {
         list-style: decimal;
-        padding-left: 20px;
+        margin-left: 10px;
 
-        li {
+        > li {
             list-style: decimal;
             margin: 0 10px;
         }
@@ -216,8 +225,9 @@
     }
 
     li {
-        ul, ol {
-            margin-left: 20px;
+        ul {
+            list-style: none;
+            margin-left: 10px;
 
             li:before {
                 content: '\f05d';
@@ -226,6 +236,11 @@
                 margin: 0 10px;
                 line-height: 28px;
             }
+        }
+
+        ol {
+            list-style: decimal;
+            margin-left: 10px;
         }
     }
 
@@ -317,3 +332,4 @@
 @import "post/title"
 @import "post/label"
 @import "post/copyright"
+@import "post/baidushare"

@@ -43,3 +43,7 @@
 <% if (is_post) { %>
     <%- include('post/copyright') %>
 <% } %>
+
+<% if (is_post && theme.baidushare){ %>
+    <%- include('post/baidushare') %>
+<% } %>

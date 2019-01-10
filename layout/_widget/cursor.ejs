@@ -1,11 +1,11 @@
-<% if (theme.cursor.on) { %>
-    <style>
-        body {
-            cursor: url("<%- url_for(theme.cursor.normal) %>"), auto;
-        }
+<style>
+    body {
+        cursor: url("<%- url_for(theme.cursor.normal) %>"), auto;
+    }
 
-        #navbar-toggler--btn, a, button {
-            cursor: url("<%- url_for(theme.cursor.link) %>"), auto;
-        }
-    </style>
-<% } %>
+    #navbar-toggler--btn
+    , a
+    , button {
+        cursor: url("<%- url_for(theme.cursor.link) %>"), auto;
+    }
+</style>

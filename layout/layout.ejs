@@ -23,7 +23,13 @@
 
     <%- css("css/style") %> 
 
-    <%- include('_widget/cursor') %>
+    <% if (theme.cursor.on) { %>
+        <%- include('_widget/cursor') %>
+    <% } %>
+
+    <script>
+        const bdshareURL = "<%= url_for('plugins/baidushare/') %>";
+    </script>
 </head>
 <body>
     <!--[if lt IE 9]>

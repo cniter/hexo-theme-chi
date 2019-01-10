@@ -62,7 +62,8 @@ $line-numbers {
         @extend $code-block;
         max-height: 50em;
         margin-right: -17px;
-        margin-bottom: -18px; 
+        margin-bottom: -18px;
+        overscroll-behavior: contain;   // 当滚动到末尾时，禁止整个页面滚动 
 
         pre {
             border: none;
