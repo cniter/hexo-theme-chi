@@ -1,6 +1,23 @@
+<% let last = 0; %>
 <% page.posts.each(function(item) { %>
+    <% let year = item.date.year(); %>
+    <% if (last != year) { %>
+        <% if(last != 0) { %>
+            </section>
+        <% } %>
+        <section class="archives-wrap">
+        <a href="<%- url_for('archives/' + year) %>" class="archive-year-wrap">
+            <span class="archive-year"><%= year %></span>
+        </a>
+    <% } %>
+    <% last = year; %>
+    <div class="archive-content">
     <%- include('post/title', {item: item, class_name: 'article-title--index'}) %>
+    </div>
 <% }) %>
+<% if (page.posts.length) { %>
+</section>
+<% } %>
 
 <% if (page.total > 1) { %>
 <nav id="pagination--nav" class="text-center">
