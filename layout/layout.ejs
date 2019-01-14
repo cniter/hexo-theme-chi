@@ -82,7 +82,7 @@
     <div class="container">
         <div class="row">
             <aside id="left-col" class="col-md-1"></aside>
-            <main class="col-md-8 main-content">
+            <main class="col-md-8 col-sm-12">
                 <%- body %>
             </main>
             <div id="site-tool">
@@ -94,26 +94,26 @@
     </div>
 
     <footer id="footer" class="text-center">
-        <span class="copyright-info">
+        <div class="copyright-info">
             &copy; 2017 -
             <%= date(new Date(), 'YYYY') %>
             <a href="<%- url_for() %>">
                 <%= config.author || config.title %>
             </a>
-        </span>
+        </div>
         <% if (theme.visit_counter) { %>
         <span class="site-visitor">
             <i class="fa fa-user-o" aria-hidden="true"></i>
             <span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span>
-            |
+            &nbsp;|&nbsp;
             <i class="fa fa-eye" aria-hidden="true"></i>
             <span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span>
-            |
+            &nbsp;|&nbsp;
             <i class="fa fa-hand-o-up" aria-hidden="true"></i>
             <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
         </span>
         <% } %>
-        <span class="site-info">
+        <div class="site-info">
             <a href="http://hexo.io/" target="_blank">
                 Hexo
             </a>
@@ -125,7 +125,7 @@
             <a href="https://github.com/cniter" target="_blank">
                 <%= theme.author %>
             </a>
-        </span>
+        </div>
     </footer>
 
     <% if (theme.mathjax){ %>
