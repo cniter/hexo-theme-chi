@@ -20,16 +20,22 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js" integrity="sha256-EPrkNjGEmCWyazb3A/Epj+W7Qm2pB9vnfXw+X6LImPM=" crossorigin="anonymous"></script>
     <!--复制黏贴板-->
     <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+    <!--不蒜子网页计数器-->
+    <% if (theme.visit_counter) { %>
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <% } %>
 
     <%- css("css/style") %> 
 
     <% if (theme.cursor.on) { %>
         <%- include('_widget/cursor') %>
     <% } %>
-
-    <script>
-        const bdshareURL = "<%= url_for('plugins/baidushare/') %>";
-    </script>
+    
+    <% if (theme.baidushare.on) { %>
+        <script>
+            const bdshareURL = "<%= url_for(theme.baidushare.path) %>";
+        </script>
+    <% } %>
 </head>
 <body>
     <!--[if lt IE 9]>
@@ -54,7 +60,7 @@
                 </a> -->
     
                 <button id="navbar-toggler--btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                    <span><i class="fa fa-bars"></i></span>
+                    <span><i class="fa fa-list-ul" aria-hidden="true"></i></span>
                 </button>
     
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
@@ -79,11 +85,48 @@
             <main class="col-md-8 main-content">
                 <%- body %>
             </main>
+            <div id="site-tool">
+                <div class="scroll"></div>
+                <div class=""></div>
+            </div>
             <aside id="right-col" class="col sidebar"></aside>
         </div>
     </div>
 
-    <footer></footer>
+    <footer id="footer" class="text-center">
+        <span class="copyright-info">
+            &copy; 2017 -
+            <%= date(new Date(), 'YYYY') %>
+            <a href="<%- url_for() %>">
+                <%= config.author || config.title %>
+            </a>
+        </span>
+        <% if (theme.visit_counter) { %>
+        <span class="site-visitor">
+            <i class="fa fa-user-o" aria-hidden="true"></i>
+            <span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span>
+            |
+            <i class="fa fa-eye" aria-hidden="true"></i>
+            <span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span>
+            |
+            <i class="fa fa-hand-o-up" aria-hidden="true"></i>
+            <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
+        </span>
+        <% } %>
+        <span class="site-info">
+            <a href="http://hexo.io/" target="_blank">
+                Hexo
+            </a>
+            theme
+            <a href="https://github.com/cniter/cniter.github.io" target="_blank">
+                chi
+            </a>
+            by
+            <a href="https://github.com/cniter" target="_blank">
+                <%= theme.author %>
+            </a>
+        </span>
+    </footer>
 
     <% if (theme.mathjax){ %>
         <%- include('_widget/mathjax') %>

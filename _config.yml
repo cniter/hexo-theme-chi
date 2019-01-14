@@ -43,7 +43,13 @@ cursor:
 enable_show_all: true
 
 # Socail Share | 是否开启分享
-baidushare: true
+baidushare: 
+  on: true
+  path: plugins/baidushare/
+
+# 不蒜子网站计数设置
+# https://busuanzi.ibruce.info/
+visit_counter: true
 
 # Display Math(LaTeX, MathML...) | 数学公式支持
 ## https://www.mathjax.org/
