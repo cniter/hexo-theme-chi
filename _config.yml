@@ -54,3 +54,23 @@ visit_counter: true
 # Display Math(LaTeX, MathML...) | 数学公式支持
 ## https://www.mathjax.org/
 mathjax: true
+
+# >>> Conments 评论系统 <<<
+# Chose ONE as your comment system and keep others disable.
+# 选一个作为网站评论系统，其他保持禁用。若都开启，则按排列顺序选择开启第一个
+
+# 是否开启Gitalk评论，https://github.com/gitalk/gitalk/blob/master/readme-cn.md
+gitalk:
+  on: true  # 是否开启
+  owner: cniter # github用户名
+  admin: ['cniter'] # 仓库所有者和合作者
+  repo: cniter.github.io  # 仓库名
+  client_id:  # 申请的OAuth Apps中的Client ID
+  client_secret:  # 申请的OAuth Apps中的Client Secret
+
+# 是否开启utterances评论，https://github.com/utterance/utterances
+utterances:
+  on: true  # 是否开启
+  repo: cniter/cniter.github.io # 仓库名
+  issue_term: title  # issue标题格式
+  theme: github-light # 显示主题

@@ -18,12 +18,17 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
     <!--网页加载进度条-->
     <script src="//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js" integrity="sha256-EPrkNjGEmCWyazb3A/Epj+W7Qm2pB9vnfXw+X6LImPM=" crossorigin="anonymous"></script>
-    <!--复制黏贴板-->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+    
     <!--不蒜子网页计数器-->
     <% if (theme.visit_counter) { %>
         <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     <% } %>
+
+    <!--gitalk评论系统-->
+    <% if (theme.gitalk.on) { %>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/gitalk/1.4.1/gitalk.min.css" integrity="sha256-5MJj8IfwScTpk3YXO1VPUpk7u3txgZVw7ekAZdHB4Ks=" crossorigin="anonymous" />
+        <script src="//cdnjs.cloudflare.com/ajax/libs/gitalk/1.4.1/gitalk.min.js" integrity="sha256-qHkbkGiVGI9wotF374DSGYPPERWwTAxDwXoKCNoZHPk=" crossorigin="anonymous"></script>
+    <% } %> 
 
     <%- css("css/style") %> 
 

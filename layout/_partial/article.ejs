@@ -51,3 +51,7 @@
 <% if (is_post && theme.baidushare.on) { %>
     <%- include('post/baidushare') %>
 <% } %>
+
+<% if (is_post && item.comments) { %>
+    <%- include('post/comments') %>
+<% } %>
