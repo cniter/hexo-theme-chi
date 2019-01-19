@@ -55,3 +55,7 @@
 <% if (is_post && item.comments) { %>
     <%- include('post/comments') %>
 <% } %>
+
+<% if (is_post && item.toc != false){ %>
+    <%- include('post/toc') %>
+<% } %>

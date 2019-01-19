@@ -94,7 +94,17 @@
                 <div class="scroll"></div>
                 <div class=""></div>
             </div>
-            <aside id="right-col" class="col sidebar"></aside>
+            <aside id="right-col" class="col sidebar">
+                <div class='toc-card'>
+                    <div class="toc-card--head">
+                        <i class="fa fa-angle-up" aria-hidden="true"></i>
+                    </div>
+                    <div id="toc" class="toc-card--content">
+                        <strong class="toc-title">文章列表</strong>
+                        <%- list_posts({amount: 999}) %>
+                    </div>
+                </div>
+            </aside>
         </div>
     </div>
 
@@ -139,5 +149,10 @@
 
     <script type="module" src="<%- url_for('js/main.js') %>"></script>
 
+    <script>
+        $(document).ready(function() {
+            $('.toc-card').width($('#right-col').width());  // 使目录栏与右侧栏宽度一致
+        });
+    </script>
 </body>
 </html>

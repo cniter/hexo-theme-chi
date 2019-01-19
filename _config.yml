@@ -61,7 +61,7 @@ mathjax: true
 
 # 是否开启Gitalk评论，https://github.com/gitalk/gitalk/blob/master/readme-cn.md
 gitalk:
-  on: true  # 是否开启
+  # on: true  # 是否开启
   owner: cniter # github用户名
   admin: ['cniter'] # 仓库所有者和合作者
   repo: cniter.github.io  # 仓库名
@@ -70,7 +70,7 @@ gitalk:
 
 # 是否开启utterances评论，https://github.com/utterance/utterances
 utterances:
-  on: true  # 是否开启
+  # on: true  # 是否开启
   repo: cniter/cniter.github.io # 仓库名
   issue_term: title  # issue标题格式
   theme: github-light # 显示主题

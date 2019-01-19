@@ -1,0 +1,113 @@
+.toc-card {
+	position: fixed;
+	bottom: 6px;
+	border: 1px solid $back-color--border;
+	box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.46);
+	border-radius: 6px;
+	transform: translateY(calc(100% - 15px));
+	transition: all 0.3s ease-in-out 0.1s;
+	z-index: 998;
+
+	&:hover {
+		transform: translateY(0);
+		transition: all 0.3s ease-in-out;
+
+		.toc-card--head {
+			color: $font-color--hover;
+		}
+	}
+
+	.toc-card--head {
+		height: 20px;
+		font-size: 20px;
+		color: $font-color--hover;
+		text-align: center;
+		background-color: #ee6252;
+		border-top-left-radius: 6px;
+		border-top-right-radius: 6px;
+	}
+
+	.toc-card--content {
+		max-height: 500px;
+		overflow: auto;
+        overscroll-behavior: contain;
+		text-align: left;
+		padding: 10px;
+		background-color: rgba(0, 0, 0, 0.46);
+
+		strong {
+			text-align: center;
+			font-weight: 700;
+			display: block;
+		}
+
+		.post-list {
+			margin-left: 20px;
+			text-align: left;
+			font-size: 0.9em;
+			line-height: 1.3em;
+			list-style: decimal;
+
+			li {
+				margin: 0.4em 0 0.1em 0.7em;
+			}
+
+			a {
+				color: $font-color--head;
+
+				&:hover {
+					color: $font-color--hover;
+				}
+			}
+		}
+
+		.toc {
+			margin-left: 10px;
+			text-align: left;
+			font-size: 0.9em;
+			line-height: 1.3em;
+			list-style: none;
+
+			li {
+				margin: 0.4em 0 0.1em 0.7em;
+			}
+
+			a {
+				color: $font-color--head;
+
+				&:hover {
+					color: $font-color--hover;
+				}
+			}
+		}
+
+		ol.toc li.toc-item i {
+			display: inline-block;
+			margin-left: -0.9em;
+			width: 0.9em;
+			color: #b3b3b3;
+			font-weight: bold;
+			cursor: pointer;
+
+			&:hover {
+				color: #000;
+			}
+
+			&.hide {
+				display: none;
+			}
+		}
+
+		.toc-title.clickable {
+			cursor: pointer;
+
+			&:hover {
+				color: #88acdb;
+			}
+
+			&:active {
+				color: #d3d3d3;
+			}
+		}
+	}
+}
