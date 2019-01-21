@@ -1,4 +1,4 @@
-# Header | 主菜单
+# Header | 主菜单 Fork Awesome icon
 menu:
   - title: 首页
     url: /
@@ -33,6 +33,21 @@ favicon: img/favicon.png
 # Link to your avatar | 填写头像地址
 avatar: img/avatar.jpg
 
+# 个人标语
+slogan: 求知！ 视界！ 未来！ ↖(^ω^)↗
+
+# Social info. Bar | 右侧栏社交信息展示 Fork Awesome icon
+## Keep "mailto:" in Email | 设置 Email 时保留 "mailto:"
+## Encrypt email 加密邮件地址 http://ctrlq.org/encode/
+## RSS requires a plugin to take effect | 使用 RSS 需先安装对应插件
+## https://github.com/hexojs/hexo-generator-feed
+social_info:
+  envelope: http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=qNvAyd3G0d3JxujOx9DFycHEhsvHxQ
+  github: https://github.com/cniter
+  rss: /atom.xml  # 需安装hexo-generator-feed插件
+  qq: http://sighttp.qq.com/authd?IDKEY=4faf682653b3b7f5f47b9cb6d2bb8b81de8fa7a8fb8cee12
+
+
 # set cursor | 设置鼠标指针图标
 cursor:
   on: true
@@ -41,6 +56,13 @@ cursor:
 
 # show all article content | 展开全文
 enable_show_all: true
+
+# 右侧栏搜索框
+# local search | 设置本地搜索 需安装hexo-generator-searchdb插件
+search:
+  on: true
+  path: search.xml
+  field: all
 
 # Socail Share | 是否开启分享
 baidushare: 
