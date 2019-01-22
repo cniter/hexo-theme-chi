@@ -154,112 +154,6 @@ img, object, video {
 			}
 		}
 	}
-
-	// 搜索
-	.search {
-		padding: 15px;
-		text-align: center;
-
-		#search-form {
-			// 搜索输入框
-			#local-search--input {
-				width: 80%;
-				margin-top: 1px;
-				color: #FFF;
-				padding: 0;
-				font-family: inherit;
-				border: 2px solid transparent;
-				border-bottom: 2px solid #d3d3d3;
-				border-radius: 2px;
-				opacity: 0.65;
-				background: none;
-				outline: medium;
-
-				&:hover {
-					border: 2px solid lightgray;
-					opacity: 1;
-					box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-				}
-			}
-
-			// 搜索重置按钮
-			.fa-times {
-				display: none;
-				padding: 1px 0.7em;
-				box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
-				cursor: pointer;
-				color: #4094c7;
-
-				&:active {
-					background: #d3d3d3;
-				}
-
-				&:hover {
-					zoom: 1.1;
-					padding: 1px 0.6em;
-					border: 1px solid #d3d3d3;
-					box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
-				}
-			}
-		}
-
-		#local-search--result {
-			margin-top: 8px;
-			font-size: 0.9em;
-			text-align: left;
-			word-break: break-all;
-			box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.46);
-			border-radius: 6px;
-
-			/* 单条搜索结果 */
-			ul.search-result--list li {
-				padding: 0.5em;
-				border-bottom: 2px solid #d3d3d3;
-
-				&:hover {
-					background: rgba(47, 46, 46, 0.8);
-					box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-				}
-			}
-
-			/* 匹配的标题 */
-			a.search-result--title {
-				line-height: 1.2;
-				font-weight: bold;
-				color: #4094c7;
-			}
-
-			/* 搜索预览段落 */
-			p.search-result {
-				margin: 0.4em auto;
-				line-height: 1.2em;
-				max-height: 3.6em;
-				overflow: hidden;
-				font-size: 0.8em;
-				text-align: justify;
-				color: #ffffffb3;
-			}
-
-			/* 匹配的关键词 */
-			em.search-keyword {
-				color: #f58e90;
-				border-bottom: 1px dashed #f58e90;
-				font-weight: bold;
-				font-size: 1em;
-			}
-		}
-
-		/* 无匹配搜索结果时显示 */
-		p.no-result {
-			display: none;
-			margin: 2em 0;
-			padding-bottom: 0.5em;
-			text-align: left;
-			color: #4094c7;
-			font-family: font-serif serif;
-			border-bottom: 2px solid #d3d3d3;
-		}
-	}
 }
 
 
@@ -274,3 +168,4 @@ img, object, video {
 @import "_widget/codeblock"
 @import "_widget/scroll"
 @import "_widget/pace-theme-flash"
+@import "_widget/search"
