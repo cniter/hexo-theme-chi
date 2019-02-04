@@ -1,49 +1,51 @@
-<div>
-    <h1>
+<div class="page-header">
+    <h1 class="page-title">
         <i class="fa fa-tags"></i>
         <%= page.title %>
     </h1>
 </div>
 
-<div>
-<% if (site.tags.length) { %>
-    <div>
+<div class="page-container">
+    <% if (site.tags.length) { %>
+    <div class="tag-title">
         <ul>
             <% site.tags.sort('name').each(function(item) { %>
             <li>
                 <a href="#<%= item.name %>">
                     <%= item.name %>
-                    <span>
+                    <sup>
                         <%= item.posts.length %>
-                    </span>
+                    </sup>
                 </a>
             </li>
             <% }); %>
         </ul>
     </div>
-    <div>
-    <% site.tags.sort('name').each(function(item) { %>
-    <h4> <%= item.name %> </h4>
+
+    <div class="item-detail">
+        <% site.tags.sort('name').each(function(item) { %>
+        <h2 id="<%= item.name %>" class="item-name">
+            <%= item.name %>
+        </h2>
         <ul>
-        <% site.posts.sort('date', -1).forEach(function(it) { %>
+            <% site.posts.sort('date', -1).forEach(function(it) { %>
             <% if (it.tags.length >= 1) { %>
-                <% it.tags.data.forEach(function(data) { %>
-                    <% if (data._id == item._id) { %>
-                    <li>
-                        <a href="<%= url_for(it.path) %>" 
-                        <% if (it.description) { %> 
-                            title="<%= it.description %>" 
-                        <% } %> >
-                            <%= it.title %>
-                        </a>
-                    </li>
-                    <% } %>
-                <% }); %>
+            <% it.tags.data.forEach(function(data) { %>
+            <% if (data._id == item._id) { %>
+            <li>
+                <a href="<%= url_for(it.path) %>" <% if (it.description) { %>
+                    title="
+                    <%= it.description %>"
+                    <% } %> >
+                    <%= it.title %>
+                </a>
+            </li>
             <% } %>
-        <% }); %>
+            <% }); %>
+            <% } %>
+            <% }); %>
         </ul>
-    </h4>
-    <% }); %>
+        <% }); %>
     </div>
-<% } %>
-</div> 
+    <% } %>
+</div>

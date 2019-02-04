@@ -1,0 +1,79 @@
+.page-header {
+	background-color: #24292e;
+	color: hsla(0,0%,100%,.75);
+	filter: none;
+	border-radius: 6px;
+	border: 1px solid $back-color--border;
+    box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.46);
+
+	.page-title {
+		font-size: 2.6em;
+		line-height: 1.2em;
+		padding: 0.6667em;
+	}
+}
+
+.page-container {
+	.tag-title {
+		min-height: 20px;
+		margin: 10px;
+		margin-left: 0;
+
+		ul {
+			margin: 0;
+			overflow: hidden;	// 解决li设置浮动导致ul无法自动撑开问题
+
+			li {
+				margin: 10px;
+				margin-left: 0;
+				float: left;
+
+				a {
+					padding: 0.3em;
+					padding-top: 0.5em; 
+					color: $font-color--head;
+					border-radius: 3px;
+					background: #002b36;
+					border: dashed 1px #000;
+					color: #999;
+
+					&:hover {
+						color: $font-color--hover;
+					} 
+
+					sup {
+						color: darkorchid;
+					}
+				}
+			}
+		}
+	}
+
+	.item-detail {
+		margin: 10px 0;
+
+		.item-name {
+			color: #ee6252;
+			text-rendering: optimizelegibility;
+			font-weight: bold;
+		}
+
+		ul {
+			padding: 10px;
+			padding-left: 40px;
+			list-style: decimal-leading-zero;
+
+			li {
+				line-height: 26px;
+
+				a {
+					color: $font-color--head;
+
+					&:hover {
+						color: $font-color--hover;
+					} 
+				}
+			}
+		}
+	}
+}
