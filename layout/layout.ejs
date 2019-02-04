@@ -3,8 +3,24 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <% let title = page.title; %>
-    <title> <% if (title) { %> <%= title %>&nbsp;|&nbsp;<% } %> <%= config.title %> </title>
+    <%
+        let page_title = page.title;
+        
+        if (is_archive()) {
+            page_title = 'Archives';
+        
+            if (is_month()) {
+                page_title += ': ' + page.year + '/' + page.month;
+            } else if (is_year()) {
+                page_title += ': ' + page.year;
+            }
+        } else if (is_category()) {
+            page_title = 'Category: ' + page.category;
+        } else if (is_tag()) {
+            page_title = 'Tag: ' + page.tag;
+        }
+    %>
+    <title> <% if (page_title) { %> <%= page_title %>&nbsp;|&nbsp;<% } %> <%= config.title %> </title>
 
     <% if (theme.favicon) { %>
         <link rel="icon" href="<%- url_for(theme.favicon) %>"> <!-- 标题栏图标 -->

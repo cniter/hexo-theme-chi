@@ -1,1 +1,28 @@
-<%- include('_partial/archive') %>
+<%
+    let page_title = page.title;
+    
+    if (is_archive()) {
+        page_title = 'Archives';
+        
+        if (is_month()) {
+            page_title += ': ' + page.year + '/' + page.month;
+        } else if (is_year()) {
+            page_title += ': ' + page.year;
+        }
+    } else if (is_category()) {
+        page_title = 'Category: ' + page.category;
+    } else if (is_tag()) {
+        page_title = 'Tag: ' + page.tag;
+    }
+%>
+
+<div class="page-header">
+    <h1 class="page-title">
+        <i class="fa fa-folder"></i>
+        <%= page_title %>
+    </h1>
+</div>
+
+<div class="page-container">
+    <%- include('_partial/archive') %>
+</div>

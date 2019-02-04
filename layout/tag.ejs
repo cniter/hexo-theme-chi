@@ -1,12 +1,32 @@
+<%
+    let page_title = page.title;
+    
+    if (is_archive()) {
+        page_title = 'Archives';
+        
+        if (is_month()) {
+            page_title += ': ' + page.year + '/' + page.month;
+        } else if (is_year()) {
+            page_title += ': ' + page.year;
+        }
+    } else if (is_category()) {
+        page_title = 'Category: ' + page.category;
+    } else if (is_tag()) {
+        page_title = 'Tag: ' + page.tag;
+    }
+%>
+
 <div class="page-header">
     <h1 class="page-title">
         <i class="fa fa-tags"></i>
-        <%= page.title %>
+        <%= page_title %>
     </h1>
 </div>
 
 <div class="page-container">
-    <% if (site.tags.length) { %>
+    <% if (page.category || page.tag) { %>
+        <%- include('_partial/archive') %>
+    <% } else if (site.tags.length) { %>
     <div class="tag-title">
         <ul>
             <% site.tags.sort('name').each(function(item) { %>
