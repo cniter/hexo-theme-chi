@@ -1,0 +1,59 @@
+<style>
+    #scene {
+        background: #112;
+        width: 360px;
+        height: 260px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+
+    hr {
+        background-color: #2f2f2f;
+        height: 3px;
+    }
+
+    div.center {
+        text-align: center;
+        margin: 0 auto;
+    }
+</style>
+
+<div class="page-header">
+    <h1 class="page-title"> <%= page.title %> </h1>
+</div>
+
+<hr />
+
+<div class="center">
+    <div id="scene" class="center"></div>
+</div>
+
+<div class="center article-content">
+    <p>
+        <p>
+            <strong>
+                很抱歉，您要访问的页面不存在或已被删除！(´ ; ω ; `)
+            </strong>
+        </p>
+        <p>
+            <a href="https://cniter.github.io/">回主页</a>
+            · <a href="https://cniter.github.io/archives/">所有文章</a>
+            · <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=qNvAyd3G0d3JxujOx9DFycHEhsvHxQ" target="_blank"
+                rel="external">留言板</a>
+        </p>
+    </p>
+
+    <p>可在右侧栏搜索框中对本站进行检索，以获取相关信息。👉</p>
+
+    <p>以下是博主喜欢的一些歌曲，可以听听，稍作休息 o(*^ ◡ ^*) o~~</p>
+</div>
+
+<div class="center article-content">
+    <p>
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=573271235&auto=0&height=430"></iframe>
+    </p>
+</div>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/three.js/100/three.min.js" integrity="sha256-lt0ajSauzZnVSX3P22JwQ+kij14gNJDF1EZYfEV3zDU=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="<%- url_for('js/404/OrbitControls.js') %>"></script>
+<script type="text/javascript" src="<%- url_for('js/404/OrbitDraw.js') %>"></script>

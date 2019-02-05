@@ -40,22 +40,19 @@
 
 </article>
 
-<% if (is_post) { %>
+<% if (is_post && !is_page()) { %>
     <%- include('post/copyright') %>
-<% } %>
-
-<% if (is_post) { %>
     <%- include('post/article-nav') %>
-<% } %>
 
-<% if (is_post && theme.baidushare.on) { %>
-    <%- include('post/baidushare') %>
-<% } %>
+    <% if (theme.baidushare.on) { %>
+        <%- include('post/baidushare') %>
+    <% } %>
 
-<% if (is_post && item.comments) { %>
-    <%- include('post/comments') %>
-<% } %>
+    <% if (item.comments) { %>
+        <%- include('post/comments') %>
+    <% } %>
 
-<% if (is_post && item.toc != false){ %>
-    <%- include('post/toc') %>
+    <% if (item.toc != false) { %>
+        <%- include('post/toc') %>
+    <% } %>
 <% } %>
