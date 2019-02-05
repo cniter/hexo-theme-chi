@@ -44,15 +44,17 @@
 
     <div class="item-detail">
         <% site.tags.sort('name').each(function(item) { %>
-        <h2 id="<%= item.name %>" class="item-name">
-            <%= item.name %>
+        <h2 id="<%= item.name %>" class="item-name" data-toggle="collapse" data-target="#modal-<%= item.name.replace(/\.|#|\s|\//g, '-') %>">
+            <%= item.name %> 
+            <i class="fa fa-caret-down" aria-hidden="true"></i>
         </h2>
-        <ul>
+        <ul id="modal-<%= item.name.replace(/\.|#|\s|\//g, '-') %>" class="collapse show">
             <% site.posts.sort('date', -1).forEach(function(it) { %>
             <% if (it.tags.length >= 1) { %>
-            <% it.tags.data.forEach(function(data) { %>
-            <% if (data._id == item._id) { %>
+            <% it.tags.forEach(function(tag) { %>
+            <% if (tag._id == item._id) { %>
             <li>
+                <span class="date-class"> <%= it.date.format("YYYY-MM-DD") %> </span> &raquo;
                 <a href="<%= url_for(it.path) %>" <% if (it.description) { %>
                     title="
                     <%= it.description %>"
