@@ -40,11 +40,13 @@
 
 </article>
 
-<% if (is_post && !is_page()) { %>
-    <%- include('post/copyright') %>
-    <%- include('post/article-nav') %>
+<% if (is_post) { %>
+    <% if (!is_page()) { %>
+        <%- include('post/copyright') %>
+        <%- include('post/article-nav') %>
+    <% } %>
 
-    <% if (theme.baidushare.on) { %>
+    <% if (item.share != false && theme.baidushare.on) { %>
         <%- include('post/baidushare') %>
     <% } %>
 
