@@ -1,0 +1,40 @@
+<%
+    let page_title = page.title;
+    
+    if (is_archive()) {
+        page_title = 'Archives';
+        
+        if (is_month()) {
+            page_title += ': ' + page.year + '/' + page.month;
+        } else if (is_year()) {
+            page_title += ': ' + page.year;
+        }
+    } else if (is_category()) {
+        page_title = 'Category: ' + page.category;
+    } else if (is_tag()) {
+        page_title = 'Tag: ' + page.tag;
+    }
+%>
+
+<div class="page-header">
+    <h1 class="page-title">
+        <% if (other_page == 'archive') { %>
+            <i class="fa fa-archive"></i>
+        <% } else if (other_page == 'tag') { %>
+            <i class="fa fa-tags"></i>
+        <% } else { %>
+            <i class="fa fa-folder"></i>
+        <% } %>
+        <%= page_title %>
+    </h1>
+</div>
+
+<div class="page-container">
+    <% if (page.category || page.tag || other_page == 'archive') { %>
+        <%- include('archive') %>
+    <% } else if (other_page == 'category') { %>
+        <%- include('category') %>
+    <% } else if (other_page == 'tag') { %>
+        <%- include('tag') %>
+    <% } %>
+</div>
