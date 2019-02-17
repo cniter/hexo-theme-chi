@@ -145,6 +145,11 @@
                         <p class='no-result'>No results found </p> <!-- 无匹配时显示，注意请在 CSS 中设置默认隐藏 -->
                     </div>
                     <% } %>
+                    <% if (theme.RevolverMaps.on) { %>
+                    <div class="revolvermaps div-border">
+                        <%- theme.RevolverMaps.code %>
+                    </div>
+                    <% } %>
                 </div>
                 <div class='toc-card'>
                     <div class="toc-card--head">

@@ -73,6 +73,11 @@ baidushare:
 # https://busuanzi.ibruce.info/
 visit_counter: true
 
+# RevolverMaps统计并使用3D地球可视化访客信息 http://www.revolvermaps.com/
+RevolverMaps: 
+  on: true
+  code: <script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=50om5cdoa3h&amp;m=7&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=49" defer="defer"></script>
+
 # Display Math(LaTeX, MathML...) | 数学公式支持
 ## https://www.mathjax.org/
 mathjax: true

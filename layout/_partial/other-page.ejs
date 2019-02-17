@@ -30,7 +30,8 @@
 </div>
 
 <div class="page-container">
-    <% if (page.category || page.tag || other_page == 'archive') { %>
+    <!-- 若为类别 或 标签 或 归档 或 other_page 未定义，则统统使用归档页面 -->
+    <% if (page.category || page.tag || other_page == 'archive' || !locals.other_page) { %>
         <%- include('archive') %>
     <% } else if (other_page == 'category') { %>
         <%- include('category') %>
