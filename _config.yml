@@ -96,3 +96,8 @@ utterances:
   repo: cniter/cniter.github.io # 仓库名
   issue_term: title  # issue标题格式
   theme: github-light # 显示主题
+
+# music on 404 page | 404页面中的音乐
+music_on_404: 
+  on: true
+  code: <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=573271235&auto=0&height=430"></iframe>

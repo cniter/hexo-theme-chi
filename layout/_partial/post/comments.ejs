@@ -1,27 +1,29 @@
+<% if (theme.gitalk.on) { %>
 <div id="comments" class="div-border">
-    <% if (theme.gitalk.on) { %>
-        <div id="gitalk-container"></div>
-        <script type="text/javascript">
-            const gitalk = new Gitalk({
-                clientID: '<%= theme.gitalk.client_id %>',
-                clientSecret: '<%= theme.gitalk.client_secret %>',
-                id: window.location.pathname,
-                repo: '<%= theme.gitalk.repo %>',
-                owner: '<%= theme.gitalk.owner %>',
-                admin: '<%= theme.gitalk.admin %>',
-                // facebook-like distraction free mode
-                distractionFreeMode: true
-            });
+    <div id="gitalk-container"></div>
+    <script type="text/javascript">
+        const gitalk = new Gitalk({
+            clientID: '<%= theme.gitalk.client_id %>',
+            clientSecret: '<%= theme.gitalk.client_secret %>',
+            id: window.location.pathname,
+            repo: '<%= theme.gitalk.repo %>',
+            owner: '<%= theme.gitalk.owner %>',
+            admin: '<%= theme.gitalk.admin %>',
+            // facebook-like distraction free mode
+            distractionFreeMode: true
+        });
 
-            gitalk.render('gitalk-container')
-        </script>
-    <% } else if (theme.utterances.on) { %>
-        <script src="https://utteranc.es/client.js" 
-            repo="<%= theme.utterances.repo %>" 
-            issue-term="<%= theme.utterances.issue_term %>" 
-            theme="<%= theme.utterances.theme %>"
-            crossorigin="anonymous" 
-            async>
-        </script>
-    <% } %>
+        gitalk.render('gitalk-container')
+    </script>
 </div>
+<% } else if (theme.utterances.on) { %>
+<div id="comments" class="div-border">
+    <script src="https://utteranc.es/client.js" 
+            repo="<%= theme.utterances.repo %>"
+            issue-term="<%= theme.utterances.issue_term %>" 
+            theme="<%= theme.utterances.theme %>" 
+            crossorigin="anonymous"
+            async>
+    </script>
+</div>
+<% } %>

@@ -133,8 +133,8 @@
                             <% } %>
                         </div>
                     </header>
+                    <% if (theme.search.on) { %>
                     <div class="search div-border">
-                        <% if (theme.search.on){ %>
                         <form id="search-form">
                             <!-- 搜索框相关 -->
                             <input type="text" id="local-search--input" name="q" results="0" placeholder=" Search..."
@@ -143,8 +143,8 @@
                         </form>
                         <div id="local-search--result"></div> <!-- 搜索结果区 -->
                         <p class='no-result'>No results found </p> <!-- 无匹配时显示，注意请在 CSS 中设置默认隐藏 -->
-                        <% } %>
                     </div>
+                    <% } %>
                 </div>
                 <div class='toc-card'>
                     <div class="toc-card--head">

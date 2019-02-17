@@ -1,4 +1,4 @@
-// from: http://www.jb51.net/jiaoben/576717.html
+// from: [HTML5+Three.js实现的3D可拖拽银河星系旋转动画特效源码](http://www.jb51.net/jiaoben/576717.html)
 
 createScene();
 createObjects();
