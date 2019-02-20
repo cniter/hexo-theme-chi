@@ -114,6 +114,7 @@
                 <div class=""></div>
             </div>
             <aside id="right-col" class="col">
+                <div id="sidebar-sticky--bottom"></div> <!-- #sidebar position: sticky 以bottom为准则必须保留该div -->
                 <div id="sidebar">
                     <header class="author-info div-border">
                         <a href="<%- url_for() %>">
@@ -199,7 +200,7 @@
                 Hexo
             </a>
             theme
-            <a href="https://github.com/cniter/cniter.github.io" target="_blank">
+            <a href="https://github.com/cniter/hexo-theme-chi" target="_blank">
                 chi
             </a>
             by
@@ -221,7 +222,10 @@
 
     <script>
         $(document).ready(function() {
-            $('.toc-card').width($('#right-col').width());  // 使目录栏与右侧栏宽度一致
+            $('.toc-card').width($('#right-col').width());  // 使目录栏与右侧栏宽度一致            
+        });
+        $(window).on('load', function () {
+            $('#sidebar-sticky--bottom').height($('#right-col').height() - $('#sidebar').height() - $('#footer').height());  // 完全填充#right-col高度
         });
     </script>
 </body>
