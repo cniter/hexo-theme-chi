@@ -148,6 +148,13 @@
                     <% if (theme.TagCanvas.on) { %>
                         <%- include('_widget/tagcloud') %>
                     <% } %>
+                    <% if (theme.friends && theme.friends.length != 0) { %>
+                        <div class="friends div-border">
+                            <% for (let friend in theme.friends) { %>
+                                <a target="_blank" class="friends-link" href="<%- url_for(theme.friends[friend]) %>"><%= friend %></a>
+                            <% } %>
+                        </div>
+                    <% } %>
                     <% if (theme.RevolverMaps.on) { %>
                     <div class="revolvermaps div-border">
                         <%- theme.RevolverMaps.code %>
