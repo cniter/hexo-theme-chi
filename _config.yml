@@ -78,6 +78,11 @@ RevolverMaps:
   on: true
   code: <script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=50om5cdoa3h&amp;m=7&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=49" defer="defer"></script>
 
+# TagCanvas 3D球形标签云 http://www.goat1000.com/tagcanvas.php
+TagCanvas: 
+  on: true
+  path: plugins/TagCanvas/jquery.tagcanvas.min.js
+
 # Display Math(LaTeX, MathML...) | 数学公式支持
 ## https://www.mathjax.org/
 mathjax: true

@@ -1,0 +1,36 @@
+<div id="tagcloud" class="tagcanvas div-border">
+    <canvas width="200" height="200" id="tagcloud-canvas">
+        <p>Anything in here will be replaced on browsers that support the canvas element</p>
+        <ul>
+            <% site.tags.sort('name').each(function(item) { %>
+            <li>
+                <a href="<%= url_for(item.path) %>" data-weight="<%= item.posts.length %>"><%= item.name %></a>
+            </li>
+            <% }); %>
+        </ul>
+    </canvas>
+    <script src="<%= url_for(theme.TagCanvas.path) %>" type="text/javascript"></script>
+    <script type="text/javascript">
+        // $('#tagcloud-canvas').width($('#tagcloud').width());
+        $(document).ready(function () {
+            if (!$('#tagcloud-canvas').tagcanvas({
+                // textHeight: 25
+                // textColour : '#ffffff',
+                // outlineThickness : 1,
+                // maxSpeed : 0.03,
+                initial: [0.1, -0.1]
+                , reverse: true
+                , depth: 0.75
+                , weight: true
+                , weightFrom: 'data-weight'
+                , weightMode: 'both'
+                , weightSizeMin: 15
+                , weightSizeMax: 50
+            })) {
+                // TagCanvas failed to load
+                $('#tagcloud').hide();
+            }
+            // your other jQuery stuff here...
+        });
+    </script>
+</div>
