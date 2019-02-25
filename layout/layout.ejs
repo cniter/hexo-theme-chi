@@ -75,10 +75,6 @@
                         <span><%= config.title %></span>
                     </a>
                 </h1>
-                <!-- <a id="avatar" class="navbar-brand" href="<%- config.root %>" title="Hi Mate">
-                    <img src="<%- url_for(theme.avatar) %>">
-                    <span class="author"><%= config.author %></span>
-                </a> -->
     
                 <button id="navbar-toggler--btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                     <span><i class="fa fa-list-ul" aria-hidden="true"></i></span>
@@ -114,7 +110,8 @@
                 <div class=""></div>
             </div>
             <aside id="right-col" class="col">
-                <div id="sidebar-sticky--bottom"></div> <!-- #sidebar position: sticky 以bottom为准则必须保留该div -->
+                <!-- #sidebar position: sticky 以bottom为准则必须保留该div，以top为准则必须去掉 -->
+                <div id="sidebar-sticky--bottom"></div>
                 <div id="sidebar">
                     <header class="author-info div-border">
                         <a href="<%- url_for() %>">
@@ -205,7 +202,7 @@
             </a>
             by
             <a href="https://github.com/cniter" target="_blank">
-                <%= theme.author %>
+                Shaun
             </a>
         </div>
     </footer>
