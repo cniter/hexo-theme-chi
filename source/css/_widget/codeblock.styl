@@ -59,6 +59,13 @@
         z-index: 3;
     }
 
+    &:hover {
+        &::before {
+            content: attr(data-lang) "　\f0ea  复制";
+            font-family: 'Source Sans Pro', sans-serif, ForkAwesome;
+        }
+    }
+
     .code {
         width: 100%;
     }

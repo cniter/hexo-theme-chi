@@ -1,3 +1,58 @@
+## ======================== 需要修改 =====================================
+# Small icon of Your site | 站点小图标地址
+favicon: img/favicon.png
+
+# Link to your avatar | 填写头像地址
+avatar: img/avatar.jpg
+
+# 个人标语
+slogan: 求知！ 视界！ 未来！ ↖(^ω^)↗
+
+# Social info. Bar | 右侧栏社交信息展示 Fork Awesome icon
+## Keep "mailto:" in Email | 设置 Email 时保留 "mailto:"
+## Encrypt email 加密邮件地址 http://ctrlq.org/encode/
+## RSS requires a plugin to take effect | 使用 RSS 需先安装对应插件
+## https://github.com/hexojs/hexo-generator-feed
+social_info:
+  envelope: http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=qNvAyd3G0d3JxujOx9DFycHEhsvHxQ  # 邮箱
+  github: https://github.com/cniter
+  rss: /atom.xml  # 需安装hexo-generator-feed插件
+  qq: http://sighttp.qq.com/authd?IDKEY=4faf682653b3b7f5f47b9cb6d2bb8b81de8fa7a8fb8cee12
+
+# >>> Conments 评论系统 <<<
+# Chose ONE as your comment system and keep others disable.
+# 选一个作为网站评论系统，其他保持禁用。若都开启，则按排列顺序选择开启第一个
+
+# 是否开启Gitalk评论，https://github.com/gitalk/gitalk/blob/master/readme-cn.md
+gitalk:
+  # on: true  # 是否开启
+  owner: cniter # github用户名
+  admin: ['cniter'] # 仓库所有者和合作者
+  repo: cniter.github.io  # 仓库名
+  client_id:  # 申请的OAuth Apps中的Client ID
+  client_secret:  # 申请的OAuth Apps中的Client Secret
+
+# 是否开启utterances评论，https://github.com/utterance/utterances
+utterances:
+  # on: true  # 是否开启
+  repo: cniter/cniter.github.io # 仓库名
+  issue_term: title  # issue标题格式
+  theme: github-light # 显示主题
+
+# Blogroll, Link exchange | 友情链接
+# friends: false
+friends:
+  Shaun's Space: https://cniter.github.io
+
+# music on 404 page | 404页面中的音乐
+music_on_404: 
+  on: true
+  code: <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=573271235&auto=0&height=430"></iframe>
+
+
+
+## ===================== 可以修改 ==============================
+
 # Header | 主菜单 Fork Awesome icon
 menu:
   - title: 首页
@@ -26,27 +81,6 @@ header_height: 60
 
 # set header background img | 设置导航栏背景图片
 header_bg_img: img/header-bg.png
-
-# Small icon of Your site | 站点小图标地址
-favicon: img/favicon.png
-
-# Link to your avatar | 填写头像地址
-avatar: img/avatar.jpg
-
-# 个人标语
-slogan: 求知！ 视界！ 未来！ ↖(^ω^)↗
-
-# Social info. Bar | 右侧栏社交信息展示 Fork Awesome icon
-## Keep "mailto:" in Email | 设置 Email 时保留 "mailto:"
-## Encrypt email 加密邮件地址 http://ctrlq.org/encode/
-## RSS requires a plugin to take effect | 使用 RSS 需先安装对应插件
-## https://github.com/hexojs/hexo-generator-feed
-social_info:
-  envelope: http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=qNvAyd3G0d3JxujOx9DFycHEhsvHxQ
-  github: https://github.com/cniter
-  rss: /atom.xml  # 需安装hexo-generator-feed插件
-  qq: http://sighttp.qq.com/authd?IDKEY=4faf682653b3b7f5f47b9cb6d2bb8b81de8fa7a8fb8cee12
-
 
 # set cursor | 设置鼠标指针图标
 cursor:
@@ -87,32 +121,3 @@ TagCanvas:
 ## https://www.mathjax.org/
 mathjax: true
 
-# >>> Conments 评论系统 <<<
-# Chose ONE as your comment system and keep others disable.
-# 选一个作为网站评论系统，其他保持禁用。若都开启，则按排列顺序选择开启第一个
-
-# 是否开启Gitalk评论，https://github.com/gitalk/gitalk/blob/master/readme-cn.md
-gitalk:
-  # on: true  # 是否开启
-  owner: cniter # github用户名
-  admin: ['cniter'] # 仓库所有者和合作者
-  repo: cniter.github.io  # 仓库名
-  client_id:  # 申请的OAuth Apps中的Client ID
-  client_secret:  # 申请的OAuth Apps中的Client Secret
-
-# 是否开启utterances评论，https://github.com/utterance/utterances
-utterances:
-  # on: true  # 是否开启
-  repo: cniter/cniter.github.io # 仓库名
-  issue_term: title  # issue标题格式
-  theme: github-light # 显示主题
-
-# Blogroll, Link exchange | 友情链接
-# friends: false
-friends:
-  Shaun's Space: https://cniter.github.io
-
-# music on 404 page | 404页面中的音乐
-music_on_404: 
-  on: true
-  code: <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=573271235&auto=0&height=430"></iframe>

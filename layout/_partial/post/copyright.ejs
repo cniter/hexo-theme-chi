@@ -7,7 +7,7 @@
     </p>
     <p>
         <span>文章作者：</span>
-        <a href="<%- url_for() %>" title="访问 <%= theme.author %> 的个人博客">
+        <a href="<%- url_for() %>" title="访问 <%= theme.author %> 的个人博客" data-toggle='tooltip'>
             <%= theme.author %>
         </a>
     </p>
@@ -21,19 +21,17 @@
     </p>
     <p>
         <span>原始链接：</span>
-        <a class="post-url" href="<%- url_for(item.path) %>" title="<%= item.title %>">
+        <a class="post-url" href="<%- url_for(item.path) %>" title="<%= item.title %>" data-toggle='tooltip'>
             <%= item.permalink %>
         </a>
         <span class="copy-path" data-clipboard-text="原文: <%= item.permalink %>　　作者: <%=theme.author%>" title="点击复制文章链接">
             <i class="fa fa-clipboard"></i>
         </span>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
-        <script> let clipboard = new ClipboardJS('.copy-path'); </script>
     </p>
     <p>
         <span>许可协议：</span>
         <i class="fa fa-creative-commons"></i> 
-        <a rel="license" href="//creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0)" target = "_blank">
+        <a rel="license" href="//creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0)" target = "_blank" data-toggle='tooltip'>
             "署名-非商业性使用-相同方式共享 4.0 国际"
         </a> 
         转载请保留原文链接及作者。

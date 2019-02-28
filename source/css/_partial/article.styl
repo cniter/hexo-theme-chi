@@ -62,6 +62,26 @@
                 }
             }
         }
+
+        del {
+            background-color: #000;
+            color: #000;
+
+            code {
+                color: #000;
+                background-color: #000;
+            }
+
+            &:hover {
+                background-color: $back-color--body;
+                color: $font-color--article;
+
+                code {
+                    color: $font-color--article;
+                    background-color: #002b36;
+                }
+            }
+        }
     }
 
     a {
@@ -171,6 +191,7 @@
         border-top: 1px dashed #000;
         border-right: 1px dashed #000;
         border-bottom: 1px dashed #000;
+        border-radius: 5px;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
