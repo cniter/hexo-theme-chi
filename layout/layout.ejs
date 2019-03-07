@@ -20,7 +20,10 @@
             page_title = 'Tag: ' + page.tag;
         }
     %>
-    <title> <% if (page_title) { %> <%= page_title %>&nbsp;|&nbsp;<% } %> <%= config.title %> </title>
+    <title> <% if (page_title) { %> <%= page_title %> | <% } %><%= config.title %></title>
+    <% if (is_home()) { %>
+        <meta name="description" content="<% if (config.description) { %><%= config.description %><% } else { %><%= config.author %>之所见所学所想所得<% } %>">
+    <% } %>
 
     <% if (theme.favicon) { %>
         <link rel="icon" href="<%- url_for(theme.favicon) %>"> <!-- 标题栏图标 -->
@@ -89,7 +92,7 @@
                         <% theme.menu.forEach(function(m) { %>
                         <li class="nav-item">
                             <a class="nav-link" href="<%- url_for(m.url) %>" title="<%- m.intro %>" data-toggle='tooltip' data-placement="bottom">
-                                <i class="<%- m.icon %>"></i>
+                                <i class="nav-icon <%- m.icon %>"></i>
                                 <%= m.title %>
                             </a>
                         </li>
