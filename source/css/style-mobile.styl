@@ -1,10 +1,13 @@
-@media (max-width: 767px) {
-    #sidebar, #sidebar-sticky--bottom {
-        display: none;
+@media (max-width: 991px) {
+    .container .row {
+        display: flex;
+        flex-flow: column;
     }
 
-    .scroll {
-        margin-left: -30px; 
+    #right-col { order: -1; }
+
+    #tagcloud, .friends, .revolvermaps, #sidebar-sticky--bottom {
+        display: none;
     }
 
     #footer {
@@ -15,6 +18,16 @@
         .site-info {
             float: none;
         }
+    }
+
+    #pagination--nav .extend {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 575px) {
+    .scroll {
+        margin-left: 0px; 
     }
 }
 
